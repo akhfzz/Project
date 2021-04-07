@@ -1,0 +1,37 @@
+<!-- <td>
+						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal{{ posted.id }}">Update</button>
+					</td> -->
+<!-- <div class="container">
+				  <div class="modal fade" id="myModal{{ posted.id }}" role="dialog">
+				    <div class="modal-dialog modal-lg">
+				      <div class="modal-content">
+				        <div class="modal-header">
+				        	<h4 class="modal-title">Update Data</h4>
+				          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+				        <div class="modal-body">
+				          	<form id="formPost" method="POST" action="{{ url_for('update') }}">
+								<label for="id_product">Id Produk :</label>
+								<input type="text" id="id_product" name="id_product" value='{{ posted.id_product }}'><br>
+								<label for="merk">Merk Produk :</label>
+								<input type="text" id="merk" name="merk" value="{{ posted.merk }}"><br>
+								<label for="price">Harga :</label>
+								<input type="text" id="price" name="price" value="{{ posted.price }}"><br>
+								<div class="file">
+								    <label for="file1">Gambar berupa PNG/JPEG</label>
+								    <input type="file" id="file1" name="file1" accept=".jpg, .jpeg, .png" multiple value="{{ posted.file1 }}">
+								</div>
+								<div class="file">
+								    <label for="file2">Gambar berupa PNG/JPEG</label>
+								    <input type="file" id="file2" name="file2" accept=".jpg, .jpeg, .png" multiple value='{{ posted.file2 }}'>
+								</div>
+								<textarea id="spesifikasi"  class="container" cols=105 rows=5 name="spesifikasi" value='{{ posted.spesifikasi }}'></textarea>
+								<div class="modal-footer">
+						         	<button type="submit" class="btn btn-primary">Update</button>
+						        </div>
+							</form>	
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div> -->

@@ -1,0 +1,195 @@
+body{
+	margin: 0;
+}
+header{
+	margin: 0;
+	background: linear-gradient(to bottom, rgb(25, 150, 189) 60%, rgb(204, 233, 183) 40%);
+	padding: 10px 20px;
+	position: relative;
+}
+.flashes{
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+}
+.header{
+	color: #fff;
+	font-family: Brush Script MT;
+	font-size: 30px;
+	text-align: right;
+	font-stretch: ultra-expanded;
+	word-spacing: 6px;
+	text-shadow: 1px 1px 2px #fff, 0 0 15px black, 0 0 12px green;
+}
+.navheader{
+	text-decoration: none;
+	color: black;
+	padding: 20px;
+	font-size: 25px;
+	font-family: Onyx;
+}
+.navheader:hover{
+	text-shadow: 1px 1px 2px blue;
+	text-decoration: none;
+}
+
+a:hover{
+	text-shadow: 1px 1px 2px red;
+}
+.parentcontent{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-image: url("../pict/gambar/intro.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+
+}
+.parent{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center
+}
+.boxcontent{
+	margin-top: 80px;
+	margin-bottom: 80px;
+	flex-basis: 400px;
+	background: #fff;
+	padding: 20px;
+	border-right: 1px solid rgb(226, 218, 220);
+	border-left: 1px solid rgb(226, 218, 220);
+}
+.footer-2{
+	margin: 0;
+	background: rgb(25, 150, 189);
+	color: black;
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	text-shadow: 1px 1px 2px white;
+	font-family: Harlow Solid Italic;
+	font-size: 20px;
+	font-stretch: ultra-expanded;
+	word-spacing: 5px;
+}
+#signupform{
+	margin: 50px;
+}
+.footer{
+	margin-top: auto;
+	background: rgb(25, 150, 189);
+	color: black;
+	padding: 20px;
+	text-align: center;
+	text-shadow: 1px 1px 2px white;
+	font-family: Harlow Solid Italic;
+	font-size: 20px;
+	font-stretch: ultra-expanded;
+	word-spacing: 5px;
+}
+.textbig{
+	font-family: Lucida Calligraphy;
+	text-align: center;
+	padding-bottom: 25px;
+	margin: 0 0 0px;
+	font-size: 20px;
+	background: -webkit-linear-gradient(55deg, rgb(0, 255, 0), rgb(255, 255, 9));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.content{
+	text-align: justify;
+	font-family: Lucida Calligraphy;
+	word-spacing: 2px;
+}
+.parentlogo{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 180px;
+    height: 200px;
+    justify-content: center;
+	background-size: 100%;
+	background-repeat: round;
+}
+
+.size{
+	font-size: 20px;
+}
+.childlogo{
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+.childlogo:hover{
+	box-shadow: 10px 10px 5px red;
+}
+@media only screen and (max-width: 673px){
+	.childlogo{
+		width: 60px;
+		height: 60px;
+	}
+	.size{
+		font-size: 15px;
+		word-spacing: 5px;
+	}
+	.boxcontent{
+	margin-top: 70px;
+	margin-bottom: 90px;
+	flex-basis: 220px;
+	background: #fff;
+	padding: 20px;
+	border-right: 1px solid rgb(226, 218, 220);
+	border-left: 1px solid rgb(226, 218, 220);	
+	}
+	.textbig{
+		padding-bottom: 15px;
+		font-size: 20px;
+	}
+	.content{
+		word-spacing: 2px;
+		font-size: 10px;
+	}
+	#signupform{
+		margin: 10px; 
+	}
+}
+.versi {
+	font-size: 10px;
+	font-family: arial;
+	text-align: center;
+}
+img.animated-gif{
+	width: 120px;
+	height: auto;
+}
+.loading{
+	color: green;
+	font-size: 15px;
+}
+.kotak_admin{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-image: url('../pict/gambar/choice.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.kotak_user{
+	display: block;
+	margin-top: 100px;
+	margin-bottom: 80px;
+	flex-basis: 400px;
+	padding: 20px;
+	font-family: Consolas;
+	text-align: center;
+	border: 1px solid rgb(255, 213, 255);
+	border-radius: 10px;
+	width: 200px;
+}
+.user{
+	text-decoration: none;
+	font-size: 30px;
+}

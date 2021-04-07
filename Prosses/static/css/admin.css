@@ -1,0 +1,207 @@
+body{
+	margin: 0;
+}
+*{
+	box-sizing : border-box;
+}
+.covid :: after {
+    content: "";
+    clear: both;
+    display: table;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+li{
+	float: left 
+}
+li a{
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none
+}
+.navbar{
+	display: block;
+	text-align: center;
+	text-decoration: none
+}
+.text-theme{
+	float: right;
+	padding: 18px 30px;
+	color: hsl(182, 100%, 21%);
+	font-family: Brush Script MT;
+	font-size: 45px;
+}
+.nav{
+	padding-top: 18px;
+}
+#menu{
+	display: block;
+	text-align: center;
+	padding-right: 10px;
+	text-decoration: none;
+	color: hsl(228, 100%, 47%);
+}
+#menu a:hover{
+	text-decoration: none;
+	color: black;
+}
+#navbarDropdown{
+	padding-top: 15px;
+	padding-left: 30px;
+}
+.post-content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.child-content{
+	margin-top: 100px;
+	padding: 20px;
+	margin-left: 30px;
+}
+.jarak{
+	margin-bottom: 20px;
+}
+:: -ms-input-placeholder .cn{
+    color: white;
+}
+: -ms-input-placeholder .cn{
+    color: white;
+}
+
+:: -ms-input-placeholder:hover .cn{
+    color: black;
+}
+: -ms-input-placeholder:hover .cn{
+    color: black;
+}
+input, select{
+    background-color: transparent;
+    padding: 15px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 15px;
+    margin-left: 5px;
+    width: 100%;
+    border: 1px solid green;
+    border-radius: 25px;
+}
+select:hover{
+    background-color: #e3ffe1;
+    color: black;
+}
+input[type=text]:hover{
+    background-color: #e3ffe1;
+    color: black
+}
+.button{
+	color: white;
+	background-color: black;
+}
+[class*="set-"]{
+    float: left;
+    border: 1px solid black;
+    margin: 23px;
+}
+div.fire {
+    border-radius: 5px;
+    padding: 16px;
+}
+.set-2 { 
+    width : 20%;
+    overflow: auto;
+    height: 300px;
+}
+.date{
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.merk{
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.spesifikasi{
+	text-align: center;
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+.harga{
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.submit{
+	background-color: red;
+	color: white;
+	font-size: 10px;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+@media only screen and (max-width: 673px){
+	.text-theme{
+		float: right;
+		padding: 20px 20px;
+		color: hsl(182, 100%, 21%);
+		font-family: Brush Script MT;
+		font-size: 35px;
+	}
+	.navbar{
+		font-size: 14px;
+		padding: 10px 10px;
+	}
+	#menu{
+		padding: 0px 5px;
+		font-size: 10px;
+	}
+	#navbarDropdown{
+		padding-left: 20px;
+	}
+	.child-content{
+		margin-top: 50px;
+		padding: 20px;
+	}
+	input[type=text],label,select, textarea{
+		width: 310px;
+	}
+
+	[class*="set-"]{
+	    float: left;
+	    border: 1px solid black;
+	    margin: 20px;
+	}
+	div.fire {
+	    border-radius: 5px;
+	    padding: 10px;
+	}
+	.set-2 { 
+	    width : 40%;
+	    overflow: auto;
+	    height: 200px;
+	}
+	.date, .harga, .merk{
+		font-size: 10px;
+		font-family: arial times new romance;
+		padding-top: 15px;
+		padding-bottom: 8px;
+	}
+	.spesifikasi{
+		text-align: center;
+		font-size: 10px;
+		font-family: arial times new romance;
+		padding-top: 15px;
+		padding-bottom: 30px;
+	}
+}	

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Akh's Catalogue Post</title>
+	<meta name="viewport" content="width=device-width initial-scale=1.0 shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../static/css/admin.css" type="text/css">
+	<link rel="stylesheet" href="../static/css/Proyek.css" type="text/css">
+	<link rel="stylesheet" href="../static/css/street.css" type="text/css">
+	<script src="../static/js/animate2.js" type="text/javascript"></script>
+	<script src="../static/js/provinsi.json" type="text/javascript"></script>
+</head>
+<body>
+	{% include "layout.html" %}
+	<div class="flashes alert alert-success alert dismissible">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<p>Welcome Kamu berhasil login</p>
+	</div>
+	<div class="btn-group dropright">
+		<button type="button" class="btn btn-light">Menu</button>
+		<button type="button" id="navbarDropdown" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle DropRight</span></button>
+		<div class="dropdown-menu">
+			<a href="/all" class="dropdown-item">Table</a>
+			<a href="/product" class="dropdown-item">Produk</a>
+			<a href="/Logout" class="dropdown-item">Logout</a>
+		</div>
+	</div>
+	<!-- <div class="btn-group">
+		<div class="btn-group dropright container">
+			<button class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<ul class="navbar">
+				<li id="menu"><a href="/papan-admin">Admin</a></li>
+				<li id="menu"><a href="/Logout">Logout</a></li>
+			</ul>
+		</div>
+	</div> -->
+	<h4 class="text-theme">Akh's Catalogue</h4><br>
+	<div class="child-content">
+		<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">Upload Here</button>
+	</div>
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Upload Product</h5>
+					<button type="button" class="Close jarak" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="formPost" method="POST" action="{{ url_for('postpro') }}">
+						<label for="id_product">Id Produk :</label>
+						<input type="text" id="id_product" name="id_product" placeholder="Berapa id produk mu"><br>
+						<label for="merk">Merk Produk :</label>
+						<input type="text" id="merk" name="merk" placeholder="Apa merk produk mu"><br>
+						<label for="price">Harga :</label>
+						<input type="text" id="price" name="price" placeholder="Berapa harga produk mu" onclick="populateSelect()"><br>
+						<label for="daerah">Posisi kamu :</label>
+						<select id="daerah" onclick="show(this)" name="daerah">
+							<option value="">-- Provinsi --</option>
+						</select><br>
+						<div class="file">
+						    <label for="file1">Gambar berupa PNG/JPEG</label>
+						    <input type="file" id="file1" name="file1" accept=".jpg, .jpeg, .png" multiple placeholder="Choose File">
+						</div>
+						<div class="file">
+						    <label for="file2">Gambar berupa PNG/JPEG</label>
+						    <input type="file" id="file2" name="file2" accept=".jpg, .jpeg, .png" multiple placeholder="Choose File">
+						</div>
+						<textarea id="spesifikasi"  class="container" cols=105 rows=5 placeholder="Beri Spesifikasi Produk mu" name="spesifikasi"></textarea>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Post</button>
+					</form>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+			<table cellspacing="0" cellpadding="2">
+				<thead>
+					<tr>
+						<th colspan="7">Tabel Manipulasi Produk</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th> Id </th>
+						<th> Gambar1 </th>
+						<th> Gambar2 </th>
+						<th> Merk </th>
+						<th> Harga </th>
+						<th> Posisi </th>
+						<th> Spesifikasi barang </th>
+					</tr>
+					{% for posted in posts.items %}
+					{% if posted.id_adm == current_user.id %}
+					<tr>
+						<td>{{ posted.id_product }}</td>
+						{% if posted.file1%}
+							<td><img src="../static/pict/gambar/{{ posted.file1 }}" style="width:20%;"></td>
+						{% else %}
+							<td>Data not available</td>
+						{% endif %}
+						{% if posted.file2 %}
+							<td><img src="../static/pict/gambar/{{ posted.file2 }}" style="width:15%;"></td>
+						{% else %}
+							<td>Data not available</td>
+						{% endif %}
+						<td>{{ posted.merk }}</td>
+						<td>{{ posted.price }}</td>
+						<td>{{ posted.daerah }}</td>
+						<td>{{ posted.spesifikasi }}</td>
+					</tr>
+					{% endif %}
+					{% endfor %}	
+			</tbody>
+		</table>
+		{% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1,right_current=2) %}
+				{% if page_num %}
+					{% if posts.page==page_num %}
+						<a class="btn btn info mb-4" href="{{ url_for('post', page=page_num) }}"> {{ page_num }}</a>
+					{% else %}
+						<a class="btn btn-outline-info mb-4" href="{{ url_for('post', page=page_num) }}">{{ page_num }}</a>
+					{% endif %}
+				{% else %}
+					...
+				{% endif %}
+		{% endfor %}
+	</div>
+</body>
+</html> 

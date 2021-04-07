@@ -1,0 +1,140 @@
+body{
+	margin: 0;
+}
+[class*="set-"]{
+    float: left;
+    border: 1px solid black;
+    margin: 23px;
+}
+div.fire {
+    border-radius: 5px;
+    padding: 16px;
+}
+.set-2 { 
+    width : 20%;
+    overflow: auto;
+    height: 300px;
+}
+
+
+.date{
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.merk{
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.spesifikasi{
+	text-align: center;
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+.harga{
+	font-size: 15px;
+	font-family: arial times new romance;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.submit{
+	background-color: red;
+	color: white;
+	font-size: 10px;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+.theme{
+	text-align: center;
+	font-family: Clarendon Lt BT;
+	font-size: 35px;
+}
+.parent{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.paragraf{
+	text-align: justify;
+}
+.box{
+	margin-top: 80px;
+	margin-bottom: 80px;
+	flex-basis: 600px;
+}
+table{
+	border-collapse: collapse;
+	width: 100%; 
+	border-bottom: 3px solid #ddd;
+}
+th, td{
+	text-align: center;
+	padding: 5px;
+}
+tr:nth-child(even){
+	background-color: #d1d1d1;
+}
+tr:hover{
+	background-color: #ffd591;
+}
+.parent{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 750px){
+	.theme{
+		text-align: center;
+		font-family: Clarendon Lt BT;
+		font-size: 26px;
+	}
+	[class*="set-"]{
+	    float: left;
+	    border: 1px solid black;
+	    margin: 20px;
+	}
+	div.fire {
+	    border-radius: 5px;
+	    padding: 10px;
+	}
+	.set-2 { 
+	    width : 40%;
+	    overflow: auto;
+	    height: 200px;
+	}
+	.date, .harga, .merk{
+		font-size: 10px;
+		font-family: arial times new romance;
+		padding-top: 15px;
+		padding-bottom: 8px;
+	}
+	.spesifikasi{
+		text-align: center;
+		font-size: 10px;
+		font-family: arial times new romance;
+		padding-top: 15px;
+		padding-bottom: 30px;
+	}
+	table{
+		width: 445px;
+	}
+	th, td{
+		padding: 2px;
+	}
+	th{
+		font-size: 13px;
+	}
+	td{
+		font-size: 11px;
+	}
+	img{
+		width: 30%;
+	}
+}

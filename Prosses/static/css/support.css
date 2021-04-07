@@ -1,0 +1,88 @@
+body{
+	margin: 0;
+	background-image: url("../pict/gambar/admin.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+}
+.button1{
+	display: block;
+	width: 150px;
+	height: 50px;
+	margin: 70px;
+	background-color: #00ff7d;
+	color: white;
+}
+.button1:hover{
+	background-color: hsl(164, 100%, 63%);
+	color: black;
+	box-shadow: 10px 10px 5px hsl(122, 83%, 76%);
+}
+.login{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; 
+}
+.form{
+	margin-top: 100px;
+    flex-basis: 300px;
+    padding: 20px;
+}
+.word{
+	font-weight: bold;
+}
+.left{
+	float: right;
+	display: block;
+}
+input{
+    background-color: transparent;
+    padding: 15px 20px;
+    width: 100%;
+    border: 0.4px solid green;
+    border-radius: 25px;
+}
+input[type=text]{
+	margin: 10px;
+}
+input[type=password]{
+	margin: 10px;
+}
+input[type=submit]{
+	margin: 10px;
+}
+input[type=submit]:hover{
+    background-color: rgb(253, 1, 0);
+    color: white;
+    text-decoration: none
+    border: 1px solid green;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	color: black;
+}
+@media screen and (max-width: 600px), handheld and (orientation:landscape){
+	.form{
+	margin-top: 50px;
+    flex-basis: 100px;
+    padding: 20px;
+	}
+	.button1{
+	display: block;
+	width: 100px;
+	height: 30px;
+	margin: 80px;
+	background-color: #00ff7d;
+	color: white;
+	}
+	body{
+		margin: 0;
+		background-image: url("../pict/gambar/admin.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: local;
+	}
+}	

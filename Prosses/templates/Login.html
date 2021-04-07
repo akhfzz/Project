@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Akh's Catalogue Login User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href ="../static/css/syle.css">
+</head>
+<body>
+    {% include "layout.html" %}
+    <div class= "login">
+        <section class= "box">
+            <h2 class="themes">LOGIN</h2>
+            <form method="POST" action="/login">
+                <input class="contoh1" type= "text" id= "name" name="name" placeholder="Masukkan Username">
+                <input class="contoh1" type= "password" id= "password" name="password" placeholder="Masukkan Password">
+                <input class="login-butt" type="submit" value="Login">
+                <a href="/Register" class="noun">Register</a>
+                <a href="/Login-user-admin" class="back">Back</a>
+            </form>
+        </section>
+    </div>
+</body>
+</html>       
